@@ -1,0 +1,12 @@
+<div *ngIf="owner" class="content-message right-content">
+    <div class="msgUser" [ngStyle]="{'background-color': colorBackRight, 'color': colorFontRight}">
+        <div [innerHTML]="text"></div>
+    </div>
+</div>
+<div *ngIf="!owner" class="content-message left-content" id="msg2">
+    <img src="http://proppg.unilab.edu.br/forms/paineis/aassets/assets/avatar.png" class="avatarBotIMG"/>
+    <div class="msgBot" [ngStyle]="{'background-color': colorBackLeft, 'color': colorFontLeft}">
+        <div [innerHTML]="text"></div>
+        <div class="dat">{{date | date:'dd/MM/yyyy'}}</div>
+    </div>
+</div>

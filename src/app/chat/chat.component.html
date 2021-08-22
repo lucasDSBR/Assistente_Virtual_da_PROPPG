@@ -1,0 +1,30 @@
+
+<div id="conteinerAssistente">
+  <div id="chat-title">
+    
+    <header class="clearfix">
+      <span class="tituloChat">BALINU</span>
+      <div class="subtituloChat">Assistente Virtual da PROPPG</div>
+    <figure class="avatar">
+      <img src="http://proppg.unilab.edu.br/forms/paineis/aassets/assets/avatar.png"/>
+    </figure>
+    <span class="closeChat">&times;</span>
+    </header>
+  </div>
+  <div class="mensagensChat" >
+    <div class="list-messages">
+      <div *ngFor="let message of messages">
+        <app-message class="message" [text]="message.text" [date]="message.date" [colorBackRight]="colorBackRight" [colorFontRight]="colorFontRight"
+        [colorBackLeft]="colorBackLeft" [colorFontLeft]="colorFontLeft" [owner]="message.userOwner"
+        [ngClass]="{'left-message': !message.userOwner, 'right-message': message.userOwner}"></app-message>
+      
+      </div>
+    </div>
+    <div class="input-message">
+      <input class="input-text-message" [(ngModel)]="textInput" placeholder="Digite sua mensagem" (keyup)="onKey($event)"/>
+      <div id="btnenviar" (click)="sendMessage()">enviar</div>
+    </div>  
+  </div>
+</div>
+
+
