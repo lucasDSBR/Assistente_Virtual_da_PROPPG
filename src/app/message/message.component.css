@@ -21,7 +21,7 @@
     border-radius: 50%;
     width: 40px;
     height: 40px;
-    border: 1px solid rgba(255, 255, 255, 0.24);
+    border: 1px solid #adb5bd;
     
 }
 
@@ -32,6 +32,7 @@
     border-radius: 0px 10px 10px 10px;
     margin-top: 30px;
     margin-bottom: 10px;
+    
 }
 
 .msgUser {
@@ -40,6 +41,7 @@
     margin-top: 10px;
     padding: 5px;
     border-radius: 10px;
+    
 }
 .dat {
     font-size: 10px;

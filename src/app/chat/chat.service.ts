@@ -7,6 +7,7 @@ import { TextMessage } from '../model/text-messsage.model';
   providedIn: 'root'
 })
 export class ChatService {
+
   constructor(private http: HttpClient) { }
 
   httpOptions = {
@@ -20,6 +21,7 @@ export class ChatService {
       "projectId": "newagent-oqdb",
       "requestText": textMessage.text
     }
+
     return this.http.post("https://appbalinu.herokuapp.com/api/requestText/", reqBody, this.httpOptions);
   }
 }

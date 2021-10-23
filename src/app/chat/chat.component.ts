@@ -32,7 +32,7 @@ export class ChatComponent implements OnInit {
       $('.closeChat').on('init',function(e) {
     
         e.preventDefault();
-        $('#conteinerAssistente').fadeOut(300);
+        $('#conteinerAssistente').fadeOut(0);
     
       });
     })();
@@ -75,10 +75,15 @@ export class ChatComponent implements OnInit {
       this.messages.push(newMessage);
       
       let messageBack: TextMessage = { "firstname": 'user', "text": this.textInput}
+      while(this.BACK_ENABLED == false){
+        console.log("esperando")
+      }
+      
       if(this.BACK_ENABLED){
         this.chatService.sendMessage(messageBack)
         .subscribe((res: ResponseMessage) => {
           let messageReturn: Message = { text: res.responseMessage, date: new Date().toDateString(), userOwner: false}
+          
           if(messageReturn){
             this.messages.push(messageReturn);
             $(document).ready(function() {

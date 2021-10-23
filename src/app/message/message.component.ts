@@ -13,7 +13,7 @@ export class MessageComponent implements OnInit {
   @Input('colorFontRight') colorFontRight: string;
   @Input('colorBackLeft') colorBackLeft: string;
   @Input('colorFontLeft') colorFontLeft: string;
-
+  @Input('boxsad') boxsad: string;
   constructor(){
 
 
